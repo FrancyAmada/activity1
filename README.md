@@ -1,50 +1,115 @@
-# React + TypeScript + Vite
+# Component Design Project Setup
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This guide provides instructions to set up both the **backend** and **frontend** for this project.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Prerequisites
 
-## Expanding the ESLint configuration
+- **Node.js** installed (Check with `node -v`)
+- **npm** installed (Check with `npm -v`)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🚀 Root Setup (Running Both Backend & Frontend Together)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Navigate to the root folder of the project and install dependencies for both backend and frontend:
+
+```sh
+cd /path/to/your/project
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Run both the backend and frontend in parallel:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+npm run start
 ```
+
+---
+
+## 🚀 Running Backend & Frontend Separately
+
+If you want to run them separately after installing on the root, follow these steps:
+
+### **Backend**
+
+#### **1️⃣ Navigate to the Backend Folder**
+
+```sh
+cd /path/to/your/project/backend
+```
+
+#### **2️⃣ Environment Configuration**
+
+Create a `.env` file in the `backend` directory and configure your environment variables as needed.
+
+#### **3️⃣ Running the Backend**
+
+**Development Mode:**
+
+```sh
+npm run dev
+```
+
+**Production Mode:**
+
+```sh
+npm start
+```
+
+---
+
+### **Frontend**
+
+#### **1️⃣ Navigate to the Frontend Folder**
+
+```sh
+cd /path/to/your/project/client
+```
+
+#### **2️⃣ Running the Frontend**
+
+**Development Mode:**
+
+```sh
+npm run dev
+```
+
+**Build for Production:**
+
+```sh
+npm run build
+```
+
+**Preview Production Build:**
+
+```sh
+npm run preview
+```
+
+---
+
+## 🎯 Summary of Commands
+
+```sh
+# Install dependencies for both backend and frontend from root
+cd /path/to/your/project
+npm install
+npm run start  # Runs both backend and frontend
+
+
+# If you want to run backend and frontend separately:
+
+# Navigate to backend and run separately
+cd backend
+npm run dev  # or npm start for production
+
+# Navigate to frontend and run separately
+cd ../client
+npm run dev  # or npm run build for production
+```
+
+---
+
+Now both the **backend** and **frontend** are ready! 🚀 Happy coding! 😊
