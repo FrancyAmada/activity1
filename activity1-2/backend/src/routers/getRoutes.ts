@@ -7,8 +7,11 @@ router.get("/", (req, res) => {
 });
 
 router.get("/post", (req, res) => {
-  const message = "This is my post!";
-  res.send(`Retrieved post with mesage: ${message}`);
+  const content = {
+    message: "This is my post!",
+    title: "This is the POST TITLE!",
+  };
+  res.send(content);
 });
 
 export default router;
