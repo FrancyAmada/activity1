@@ -1,0 +1,49 @@
+.user-card {
+  background-color: azure;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: #333;
+}
+
+.user-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.user-table {
+  width: 100%;
+}
+
+.edit-button,
+.delete-button {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
